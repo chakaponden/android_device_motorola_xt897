@@ -87,7 +87,7 @@ include device/qcom/sepolicy/sepolicy.mk
 
 # SELinux
 BOARD_SEPOLICY_DIRS += \
-    device/motorola/msm8960-common_jbbl/sepolicy
+    device/motorola/msm8960_jbbl-common/sepolicy
 
 BOARD_SEPOLICY_UNION += \
     atvc.te \
