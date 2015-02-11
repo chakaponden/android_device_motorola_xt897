@@ -111,6 +111,7 @@ BOARD_SEPOLICY_UNION += \
     rmt_storage.te \
     sensors.te \
     surfaceflinger.te \
+    sysinit.te \
     tee.te \
     thermal-engine.te \
     time_daemon.te \
