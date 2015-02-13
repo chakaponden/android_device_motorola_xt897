@@ -43,6 +43,14 @@ PRODUCT_PACKAGES += \
     nfc.msm8960 \
     power.msm8960
 
+# Filesystem
+PRODUCT_PACKAGES += \
+    mkfs.f2fs \
+    fsck.f2fs \
+    e2fsck \
+    make_ext4fs \
+    setup_fs
+
 # Motorola
 PRODUCT_PACKAGES += \
     batt_health \
