@@ -73,6 +73,9 @@ TARGET_RECOVERY_DEVICE_DIRS := device/motorola/msm8960_jbbl-common
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBA_8888"
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/etc/fstab.qcom
 TARGET_USERIMAGES_USE_EXT4 := true
+ifeq ($(HOST_OS),linux)
+TARGET_USERIMAGES_USE_F2FS := true
+endif
 
 # Telephony
 BOARD_USES_LEGACY_MMAP := true
