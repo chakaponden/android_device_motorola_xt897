@@ -40,7 +40,6 @@ PRODUCT_PACKAGES += \
     hwcomposer.msm8960 \
     lights.MSM8960 \
     memtrack.msm8960 \
-    nfc.msm8960 \
     power.msm8960
 
 # Filesystem
@@ -154,5 +153,4 @@ $(call inherit-product, device/motorola/qcom-common/qcom-common.mk)
 $(call inherit-product, device/motorola/qcom-common/idc/idc.mk)
 $(call inherit-product, device/motorola/qcom-common/keychars/keychars.mk)
 $(call inherit-product, device/motorola/qcom-common/keylayout/keylayout.mk)
-$(call inherit-product, device/motorola/qcom-common/modules/nfc/nfc.mk)
 $(call inherit-product, vendor/motorola/msm8960_jbbl-common/msm8960_jbbl-common-vendor.mk)
