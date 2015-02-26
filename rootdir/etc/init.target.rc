@@ -280,7 +280,7 @@ on boot
    mkdir /data/power_supply_logger 0755 mot_pwric mot_pwric
 
     # Setup folder for aplogd
-    mkdir /data/logger 0750 log log
+    mkdir /data/aplogd 0750 log log
 
     # Setup folder for diag_mdlog
     mkdir /data/diag_mdlog 0750 system log
