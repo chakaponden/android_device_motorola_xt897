@@ -7,3 +7,6 @@ type pds_file, file_type;
 
 # qdump
 type qdump_data_file, file_type, data_file_type;
+
+# aplogd
+type aplogd_data_file, file_type, data_file_type;
