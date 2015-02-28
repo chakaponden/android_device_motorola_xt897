@@ -1,4 +1,5 @@
 # Init Services
+/system/bin/aplogd                 u:object_r:aplogd_exec:s0
 /system/bin/dbvc_atvc_property_set u:object_r:atvc_exec:s0
 /system/bin/batt_health            u:object_r:batt_health_exec:s0
 /system/bin/bootmodem              u:object_r:bootmodem_exec:s0
@@ -31,6 +32,9 @@
 /dev/coredump_riva                 u:object_r:qdumpd_device:s0
 /data/misc/ril/bp-dumps(/.*)?      u:object_r:qdump_data_file:s0
 /data/ss-ram-dumps/bp-dumps(/.*)?  u:object_r:qdump_data_file:s0
+
+# aplogd
+/data/aplogd(/.*)?                 u:object_r:aplogd_data_file:s0
 
 # atvc
 /dev/sec                           u:object_r:atvc_device:s0

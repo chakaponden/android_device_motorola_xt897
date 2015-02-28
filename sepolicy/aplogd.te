@@ -1,0 +1,24 @@
+type aplogd, domain;
+type aplogd_exec, exec_type, file_type;
+init_daemon_domain(aplogd)
+
+allow aplogd aplogd_data_file:dir create_dir_perms;
+allow aplogd aplogd_data_file:file { create_file_perms getattr };
+
+allow aplogd self:capability { setuid setgid };
+
+# Read dmesg
+allow aplogd self:capability2 syslog;
+allow aplogd kernel:system syslog_mod;
+
+# need to create and write files in fuse partition
+allow aplogd fuse:dir create_dir_perms;
+allow aplogd fuse:file create_file_perms;
+
+# need for capture adb logs
+unix_socket_connect(aplogd, logdr, logd)
+
+unix_socket_connect(aplogd, vold, vold)
+
+allow aplogd aplogd_prop:property_service set;
+unix_socket_connect(aplogd, property, init)

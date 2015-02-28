@@ -92,6 +92,7 @@ BOARD_SEPOLICY_DIRS += \
     device/motorola/msm8960_jbbl-common/sepolicy
 
 BOARD_SEPOLICY_UNION += \
+    aplogd.te \
     atvc.te \
     batt_health.te \
     bootmodem.te \
