@@ -98,8 +98,7 @@ PRODUCT_COPY_FILES += \
 
 # Audio configuration
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/config/audio_policy.conf:system/etc/audio_policy.conf \
-    $(LOCAL_PATH)/config/snd_soc_msm_2x:system/etc/snd_soc_msm/snd_soc_msm_2x
+    $(LOCAL_PATH)/config/audio_policy.conf:system/etc/audio_policy.conf
 
 # Media config
 PRODUCT_COPY_FILES += \
