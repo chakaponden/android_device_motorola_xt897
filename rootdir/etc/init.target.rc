@@ -414,7 +414,7 @@ on property:persist.log.aplogd.enable=1
 on property:persist.log.aplogd.enable=0
     stop aplogd
 
-service aplogd /system/bin/aplogd
+service aplogd /system/bin/aplogd -c mrsek -n 5
     class main
     #user log
     #group log system sdcard_rw sdcard_r media_rw mount
