@@ -16,3 +16,4 @@
 /dev/block/platform/msm_sdcc.1/by-name/modem        /modem           emmc    defaults                                                                             defaults
 /devices/platform/msm_sdcc.3/mmc_host/mmc1*         auto             auto    defaults                                                                             voldmanaged=sdcard1:auto,noemulatedsd
 /devices/platform/msm_hsusb_host                    auto             auto    defaults                                                                             voldmanaged=usbdisk:auto
+/dev/block/zram0                                    none             swap    defaults                                                                             zramsize=268435456
