@@ -37,7 +37,6 @@ public class MotorolaQualcommRIL extends RIL implements CommandsInterface {
     public MotorolaQualcommRIL(Context context, int preferredNetworkType,
             int cdmaSubscription, Integer instanceId) {
         this(context, preferredNetworkType, cdmaSubscription);
-        mQANElements = 5; // fifth element is network generation - 2G/3G/(4G?)
     }
 
     public MotorolaQualcommRIL(Context context, int networkMode, int cdmaSubscription) {
@@ -109,7 +108,7 @@ public class MotorolaQualcommRIL extends RIL implements CommandsInterface {
      */
     @Override
     public void getCellInfoList(Message result) {
-        riljLog("getCellInfoList: not supported");
+        riljLog("MotoQcRIL: getCellInfoList: not supported");
         if (result != null) {
             CommandException ex = new CommandException(
                 CommandException.Error.REQUEST_NOT_SUPPORTED);
@@ -123,7 +122,7 @@ public class MotorolaQualcommRIL extends RIL implements CommandsInterface {
      */
     @Override
     public void setCellInfoListRate(int rateInMillis, Message response) {
-        riljLog("setCellInfoListRate: not supported");
+        riljLog("MotoQcRIL: setCellInfoListRate: not supported");
         if (response != null) {
             CommandException ex = new CommandException(
                 CommandException.Error.REQUEST_NOT_SUPPORTED);
@@ -132,13 +131,46 @@ public class MotorolaQualcommRIL extends RIL implements CommandsInterface {
         }
     }
 
+    @Override
+    public void setInitialAttachApn(String apn, String protocol, int authType, String username,
+            String password, Message result) {
+        riljLog("MotoQcRIL: setInitialAttachApn: not supported");
+        if (result != null) {
+            CommandException ex = new CommandException(
+                CommandException.Error.REQUEST_NOT_SUPPORTED);
+            AsyncResult.forMessage(result, null, ex);
+            result.sendToTarget();
+        }
+    }
+
+    @Override
+    public void getImsRegistrationState(Message result) {
+        riljLog("MotoQcRIL: getImsRegistrationState: not supported");
+        if (result != null) {
+            CommandException ex = new CommandException(
+                CommandException.Error.REQUEST_NOT_SUPPORTED);
+            AsyncResult.forMessage(result, null, ex);
+            result.sendToTarget();
+        }
+    }
+
     /**
      * {@inheritDoc}
      */
     @Override
     public void setDataAllowed(boolean allowed, Message result) {
-        riljLog("setDataAllowed: not supported");
+        riljLog("MotoQcRIL: setDataAllowed: not supported");
+        if (result != null) {
+            CommandException e = new CommandException(
+                CommandException.Error.REQUEST_NOT_SUPPORTED);
+            AsyncResult.forMessage(result, null, e);
+            result.sendToTarget();
+        }
+    }
 
+    @Override
+    public void getHardwareConfig (Message result) {
+        riljLog("MotoQcRIL: getHardwareConfig: not supported");
         if (result != null) {
             CommandException e = new CommandException(
                 CommandException.Error.REQUEST_NOT_SUPPORTED);
