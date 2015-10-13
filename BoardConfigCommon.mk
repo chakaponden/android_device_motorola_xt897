@@ -91,34 +91,3 @@ include device/qcom/sepolicy/sepolicy.mk
 BOARD_SEPOLICY_DIRS += \
     device/motorola/msm8960_jbbl-common/sepolicy
 
-BOARD_SEPOLICY_UNION += \
-    aplogd.te \
-    atvc.te \
-    batt_health.te \
-    bootmodem.te \
-    device.te \
-    file.te \
-    file_contexts \
-    graphicsd.te \
-    location.te \
-    mediaserver.te \
-    mm-qcamerad.te \
-    mpdecision.te \
-    netd.te \
-    netmgrd.te \
-    platform_app.te \
-    property_contexts \
-    property.te \
-    qdumpd.te \
-    qmuxd.te \
-    rild.te \
-    rmt_storage.te \
-    sensors.te \
-    surfaceflinger.te \
-    sysinit.te \
-    tee.te \
-    thermal-engine.te \
-    time_daemon.te \
-    ueventd.te \
-    vold.te \
-    whisperd.te
