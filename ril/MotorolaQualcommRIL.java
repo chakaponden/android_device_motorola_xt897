@@ -185,46 +185,43 @@ public class MotorolaQualcommRIL extends RIL implements CommandsInterface {
     @Override
     public void setPreferredNetworkType(int networkType, Message response) {
         riljLog("MotoQcRIL: setPreferredNetworkType: " + networkType);
-
         if (!setPreferredNetworkTypeSeen) {
             riljLog("MotoQcRIL: need to reboot modem!");
             setRadioPower(false, null);
             setPreferredNetworkTypeSeen = true;
         }
-
         super.setPreferredNetworkType(networkType, response);
     }
 
     @Override
-    public void getRadioCapability (Message result) {
-        riljLog("MotoQcRIL: getRadioCapability: not supported");
-        if (result != null) {
-            CommandException e = new CommandException(
-                CommandException.Error.REQUEST_NOT_SUPPORTED);
-            AsyncResult.forMessage(result, null, e);
-            result.sendToTarget();
+    public void getRadioCapability (Message response) {
+        riljLog("MotoQcRIL: getRadioCapability");
+        if (response != null) {
+            Object ret = makeStaticRadioCapability();
+            AsyncResult.forMessage(response, ret, null);
+            response.sendToTarget();
         }
     }
 
     @Override
-    public void startLceService(int reportIntervalMs, boolean pullMode, Message result) {
+    public void startLceService(int reportIntervalMs, boolean pullMode, Message response) {
         riljLog("MotoQcRIL: startLceService: not supported");
-        if (result != null) {
+        if (response != null) {
             CommandException e = new CommandException(
                 CommandException.Error.REQUEST_NOT_SUPPORTED);
-            AsyncResult.forMessage(result, null, e);
-            result.sendToTarget();
+            AsyncResult.forMessage(response, null, e);
+            response.sendToTarget();
         }
     }
 
     @Override
-    public void iccOpenLogicalChannel(String AID, Message result) {
+    public void iccOpenLogicalChannel(String AID, Message response) {
         riljLog("MotoQcRIL: iccOpenLogicalChannel: not supported");
-        if (result != null) {
+        if (response != null) {
             CommandException e = new CommandException(
                 CommandException.Error.REQUEST_NOT_SUPPORTED);
-            AsyncResult.forMessage(result, null, e);
-            result.sendToTarget();
+            AsyncResult.forMessage(response, null, e);
+            response.sendToTarget();
         }
     }
 }
