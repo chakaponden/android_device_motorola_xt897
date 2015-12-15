@@ -7,7 +7,7 @@ allow whisperd pds_file:file rw_file_perms;
 allow whisperd whisperd_device:chr_file rw_file_perms;
 allow whisperd serial_device:chr_file rw_file_perms;
 allow whisperd self:netlink_kobject_uevent_socket { read bind create setopt };
-allow whisperd self:process execmem;
+allow whisperd system_file:file execmod;
 
 allow whisperd whisperd_prop:property_service set;;
 unix_socket_connect(whisperd, property, init)

@@ -1,1 +1,1 @@
-allow qmuxd self:process execmem;
+allow qmuxd system_file:file execmod;
