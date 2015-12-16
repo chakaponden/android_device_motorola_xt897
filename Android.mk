@@ -38,7 +38,7 @@ include $(call all-makefiles-under,$(LOCAL_PATH))
 include $(CLEAR_VARS)
 
 FIRMWARE_DSPS_IMAGES := \
-    dsps.b00 dsps.b01 dsps.b02 dsps.b03 dsps.b04 dsps.05 dsps.mdt
+    dsps.b00 dsps.b01 dsps.b02 dsps.b03 dsps.b04 dsps.b05 dsps.mdt
 
 FIRMWARE_DSPS_SYMLINKS := $(addprefix $(TARGET_OUT_ETC)/firmware/,$(notdir $(FIRMWARE_DSPS_IMAGES)))
 $(FIRMWARE_DSPS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
