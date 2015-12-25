@@ -61,8 +61,9 @@ PRODUCT_PACKAGES += \
     graphicsd \
     mot_boot_mode
 
-# Compatibility symbols
+# Camera compatibility libs
 PRODUCT_PACKAGES += \
+    libcamera_motocl \
     libmotou \
     libshim_cam
 
