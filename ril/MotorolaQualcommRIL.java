@@ -39,11 +39,11 @@ public class MotorolaQualcommRIL extends RIL implements CommandsInterface {
 
     public MotorolaQualcommRIL(Context context, int preferredNetworkType,
             int cdmaSubscription, Integer instanceId) {
-        this(context, preferredNetworkType, cdmaSubscription);
+        super(context, preferredNetworkType, cdmaSubscription, instanceId);
     }
 
     public MotorolaQualcommRIL(Context context, int networkMode, int cdmaSubscription) {
-        super(context, networkMode, cdmaSubscription);
+        this(context, networkMode, cdmaSubscription, null);
     }
 
     @Override
