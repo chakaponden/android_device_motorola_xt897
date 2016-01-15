@@ -114,6 +114,17 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/config/media_profiles.xml:system/etc/media_profiles.xml \
     $(LOCAL_PATH)/config/media_codecs_aosp.xml:system/etc/media_codecs.xml
 
+# SELinux execmod workaround
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/scripts/execmod-wrapper.sh:system/bin/mm-qcamera-daemon \
+    $(LOCAL_PATH)/scripts/execmod-wrapper.sh:system/bin/mpdecision \
+    $(LOCAL_PATH)/scripts/execmod-wrapper.sh:system/bin/qdumpd \
+    $(LOCAL_PATH)/scripts/execmod-wrapper.sh:system/bin/qmuxd \
+    $(LOCAL_PATH)/scripts/execmod-wrapper.sh:system/bin/rmt_storage \
+    $(LOCAL_PATH)/scripts/execmod-wrapper.sh:system/bin/sensors.qcom \
+    $(LOCAL_PATH)/scripts/execmod-wrapper.sh:system/bin/thermald \
+    $(LOCAL_PATH)/scripts/execmod-wrapper.sh:system/bin/whisperd
+
 # Misc
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.usb.mtp=0x2e62 \

@@ -6,7 +6,7 @@ lib/libcsd-client.so
 lib/libacdbloader.so
 
 # Camera
-bin/mm-qcamera-daemon
+bin/mm-qcamera-daemon.exec
 bin/v4l2-qcamera-app
 lib/hw/camera.vendor.msm8960.so
 lib/libchromatix_imx074_default_video.so
@@ -89,11 +89,11 @@ etc/firmware/vidc_1080p.fw
 etc/firmware/vidcfw.elf
 
 # Moto
-bin/whisperd
+bin/whisperd.exec
 lib/libmoto_netutil.so
 
 # Perf
-bin/mpdecision
+bin/mpdecision.exec
 
 # Qualcomm framework
 lib/libconfigdb.so
@@ -118,11 +118,11 @@ vendor/lib/libqmi_encdec.so
 
 # Radio
 bin/netmgrd
-bin/qdumpd
+bin/qdumpd.exec
 bin/qmi_motext_hook
 bin/qmiproxy
-bin/qmuxd
-bin/rmt_storage
+bin/qmuxd.exec
+bin/rmt_storage.exec
 lib/libbabysit.so
 lib/libmotext_inf.so
 lib/libnetmgr.so
@@ -131,7 +131,7 @@ lib/libril-qcril-hook-oem.so
 lib/libsarqmictrl.so
 
 # Sensors
-bin/sensors.qcom
+bin/sensors.qcom.exec
 lib/hw/sensorhub.msm8960.so
 lib/hw/sensors.msm8960.so
 lib/hw/sensors.oem.so
@@ -141,4 +141,4 @@ lib/libsensorhub_jni.so
 lib/libsensor_reg.so
 
 # Thermal
-bin/thermald
+bin/thermald.exec
