@@ -4,6 +4,8 @@
 /system/bin/batt_health            u:object_r:batt_health_exec:s0
 /system/bin/bootmodem              u:object_r:bootmodem_exec:s0
 /system/bin/graphicsd              u:object_r:graphicsd_exec:s0
+/system/bin/mot_boot_mode          u:object_r:mot_boot_mode_exec:s0
+/system/bin/mount_pds.sh           u:object_r:mount_pds_exec:s0
 /system/bin/qdumpd                 u:object_r:qdumpd_exec:s0
 /system/bin/whisperd               u:object_r:whisperd_exec:s0
 
@@ -44,9 +46,11 @@
 /sys/module/pm8921_bms(/.*)?       u:object_r:batt_health_sysfs:s0
 
 # Motorola partitions
+/dev/block/mmcblk0p1               u:object_r:firmware_block_device:s0
 /dev/block/mmcblk0p8               u:object_r:utags_block_device:s0
 /dev/block/mmcblk0p20              u:object_r:hob_block_device:s0
 /dev/block/mmcblk0p21              u:object_r:hob_block_device:s0
+/dev/block/mmcblk0p22              u:object_r:persist_block_device:s0
 /dev/block/mmcblk0p28              u:object_r:cid_block_device:s0
 
 # PDS

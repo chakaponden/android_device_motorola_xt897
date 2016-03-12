@@ -2,6 +2,9 @@
 type batt_health_data_file, file_type;
 type batt_health_sysfs, sysfs_type, fs_type;
 
+# mount_pds.sh
+type mount_pds_exec, exec_type, file_type;
+
 # PDS files
 type pds_file, file_type;
 
