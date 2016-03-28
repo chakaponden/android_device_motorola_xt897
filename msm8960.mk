@@ -156,7 +156,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Radio and Telephony
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.telephony.ril_class=MotorolaQualcommRIL
+    ro.telephony.ril_class=MotorolaQualcommRIL \
+    ro.telephony.ril.config=setPrefNwTypeOnUnsolConnected
 
 # Misc
 PRODUCT_PROPERTY_OVERRIDES += \
