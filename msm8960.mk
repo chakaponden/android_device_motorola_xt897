@@ -107,7 +107,8 @@ PRODUCT_PACKAGES += \
 
 # TWRP
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/twrp.fstab:recovery/root/etc/twrp.fstab
+    $(LOCAL_PATH)/rootdir/etc/twrp.fstab:recovery/root/etc/twrp.fstab \
+    $(LOCAL_PATH)/rootdir/etc/init.recovery.usb.rc:root/init.recovery.usb.rc
 
 # Audio configuration
 PRODUCT_COPY_FILES += \
