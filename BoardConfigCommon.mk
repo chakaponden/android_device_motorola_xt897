@@ -83,6 +83,7 @@ BOARD_USES_LEGACY_MMAP := true
 TW_EXTERNAL_STORAGE_PATH := "/external_sd"
 TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
 TW_EXCLUDE_DEFAULT_USB_INIT := true
+TW_INCLUDE_CRYPTO := true
 
 # QCOM SELinux policy
 include device/qcom/sepolicy/sepolicy.mk
