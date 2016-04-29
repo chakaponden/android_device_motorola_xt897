@@ -473,65 +473,6 @@ service graphicsd /system/bin/graphicsd
     user system
     group system log
 
-# Define the trigger to Start FastDormancy service
-service start_fd  /system/bin/sh /system/bin/am startservice -a com.motorola.fastdormancy.start
-    disabled
-    user system
-    group system
-    oneshot
-
-# Define the trigger to stop FastDormancy service
-service stop_fd  /system/bin/sh /system/bin/am broadcast -a  com.motorola.fastdormancy.stop
-    disabled
-    user system
-    group system
-    oneshot
-
-#Trigger FastDormancy service start when network type is changed to UMTS
-on property:gsm.network.type="UMTS"
-    start start_fd
-
-on property:gsm.network.type="HSDPA"
-    start start_fd
-
-on property:gsm.network.type="HSUPA"
-    start start_fd
-
-on property:gsm.network.type="HSPA"
-    start start_fd
-
-on property:gsm.network.type="HSPAP"
-    start start_fd
-
-#Trigger FastDormancy service stop when network is unknow or CDMA
-#GSM, GPRS, EDGE, and HSPAP is not handled in order to avoid the service to be started and stopped back and force.
-on property:gsm.network.type="Unknown"
-    start stop_fd
-
-on property:gsm.network.type="CDMA-IS95A"
-    start stop_fd
-
-on property:gsm.network.type="CDMA-IS95B"
-    start stop_fd
-
-on property:gsm.network.type="1xRTT"
-    start stop_fd
-
-on property:gsm.network.type="EvDo-rev.0"
-    start stop_fd
-
-on property:gsm.network.type="EvDo-rev.A"
-    start stop_fd
-
-on property:gsm.network.type="EvDo-rev.B"
-    start stop_fd
-
-on property:gsm.network.type="eHRPD"
-    start stop_fd
-
-on property:gsm.network.type="LTE"
-    start stop_fd
-
 # Restart adbd so it can run as root
 on property:service.adb.root=1
     write /sys/class/android_usb/android0/enable 0
