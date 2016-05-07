@@ -1,8 +1,10 @@
 allow qti_init_shell init:fifo_file rw_file_perms;
-allow qti_init_shell sensors_data_file:file rw_file_perms;
+allow qti_init_shell sensors_data_file:file create_file_perms;
+allow qti_init_shell sensors_data_file:dir w_dir_perms;
 allow qti_init_shell wifi_data_file:file r_file_perms;
 allow qti_init_shell wifi_data_file:dir r_dir_perms;
-allow qti_init_shell dhcp_data_file:dir r_dir_perms;
+allow qti_init_shell dhcp_data_file:file { getattr unlink };
+allow qti_init_shell dhcp_data_file:dir rw_dir_perms;
 
 binder_use(qti_init_shell);
 
