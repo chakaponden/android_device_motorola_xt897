@@ -1,7 +1,3 @@
-# Audio
-lib/libalsautils.so
-lib/libaudioalsa.so
-
 # Bluetooth
 bin/btnvtool
 bin/hci_qcomm_init

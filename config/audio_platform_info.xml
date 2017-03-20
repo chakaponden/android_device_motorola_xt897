@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- Copyright (C) 2016 The CyanogenMod Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<audio_platform_info>
+    <acdb_ids>
+        <!-- Output devices -->
+        <device name="SND_DEVICE_OUT_VOIP_HANDSET" acdb_id="7" />
+        <device name="SND_DEVICE_OUT_VOIP_HEADPHONES" acdb_id="10" />
+        <device name="SND_DEVICE_OUT_VOIP_SPEAKER" acdb_id="14" />
+        <device name="SND_DEVICE_OUT_DOCK" acdb_id="54" />
+        <device name="SND_DEVICE_OUT_SPEAKER_AND_DOCK" acdb_id="54" />
+
+        <!-- Input devices -->
+        <device name="SND_DEVICE_IN_HANDSET_DMIC" acdb_id="6" />
+        <device name="SND_DEVICE_IN_VOICE_DMIC" acdb_id="6" />
+        <device name="SND_DEVICE_IN_VOIP_HANDSET_MIC" acdb_id="6" />
+        <device name="SND_DEVICE_IN_HANDSET_MIC" acdb_id="11" />
+        <device name="SND_DEVICE_IN_VOICE_REC_MIC" acdb_id="11" />
+        <device name="SND_DEVICE_IN_VOICE_SPEAKER_MIC" acdb_id="49" />
+        <device name="SND_DEVICE_IN_VOIP_SPEAKER_MIC" acdb_id="49" />
+        <device name="SND_DEVICE_IN_CAMCORDER_MIC" acdb_id="50" />
+    </acdb_ids>
+
+    <backend_names>
+        <!-- empty -->
+    </backend_names>
+
+    <pcm_ids>
+        <usecase name="USECASE_AUDIO_RECORD_COMPRESS" type="in" id="9" />
+        <usecase name="USECASE_AUDIO_PLAYBACK_LOW_LATENCY" type="out" id="14"/>
+    </pcm_ids>
+
+    <device_names>
+        <!-- empty -->
+    </device_names>
+</audio_platform_info>

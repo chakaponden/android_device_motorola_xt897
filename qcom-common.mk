@@ -36,6 +36,20 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.audio.low_latency.xml:system/etc/permissions/android.hardware.audio.low_latency.xml \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:system/etc/permissions/android.hardware.bluetooth_le.xml
 
+# Audio configuration
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/config/audio_effects.conf:system/vendor/etc/audio_effects.conf \
+    $(LOCAL_PATH)/config/audio_policy.conf:system/etc/audio_policy.conf \
+    $(LOCAL_PATH)/config/audio_platform_info.xml:system/etc/audio_platform_info.xml
+# the small ones - Razr M, Photon Q - need MICBIAS CAPLESS switches disabled
+ifeq ($(TARGET_SCREEN_WIDTH),540)
+    PRODUCT_COPY_FILES += \
+        $(LOCAL_PATH)/config/mixer_paths_cap.xml:system/etc/mixer_paths.xml
+else
+    PRODUCT_COPY_FILES += \
+        $(LOCAL_PATH)/config/mixer_paths.xml:system/etc/mixer_paths.xml
+endif
+
 # Media
 PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
@@ -59,6 +73,10 @@ PRODUCT_PACKAGES += \
     arec \
     alsaucm_test \
     tinymix
+
+# Voice processing
+PRODUCT_PACKAGES += \
+    libqcomvoiceprocessing
 
 # Misc
 PRODUCT_PACKAGES += \
@@ -184,11 +202,15 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Audio
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.audio.fluence.mode=endfire \
-    persist.audio.vr.enable=false \
-    persist.audio.handset.mic=digital \
-    ro.qc.sdk.audio.ssr=false \
-    ro.audio.flinger_standbytime_ms=300
+    ro.audio.flinger_standbytime_ms=300 \
+    persist.audio.lowlatency.rec=false
+    audio.offload.disable=1 \
+    ro.qc.sdk.audio.fluencetype=fluence \
+    persist.audio.fluence.voicecall=true \
+    persist.audio.fluence.voicerec=false \
+    persist.audio.fluence.speaker=false \
+    use.dedicated.device.for.voip=true \
+    use.voice.path.for.pcm.voip=true
 
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -200,9 +222,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
-    lpa.decode=true \
-    qcom.hw.aac.encoder=true \
-    persist.audio.lowlatency.rec=false
+    qcom.hw.aac.encoder=true
 
 # WiFi
 PRODUCT_PROPERTY_OVERRIDES += \
