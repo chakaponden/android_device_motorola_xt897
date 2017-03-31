@@ -46,20 +46,30 @@
 /data/power_supply_logger(/.*)?    u:object_r:batt_health_data_file:s0
 /sys/module/pm8921_bms(/.*)?       u:object_r:batt_health_sysfs:s0
 
+# graphicsd
+/sys/devices/platform/kgsl-3d0.0/kgsl/kgsl-3d0/snapshot/dump      u:object_r:kgsl_snapshot_sysfs:s0
+/sys/devices/platform/kgsl-3d0.0/kgsl/kgsl-3d0/snapshot/timestamp u:object_r:kgsl_snapshot_sysfs:s0
+
+# mediaserver
+/sys/devices/i2c-4/4-0063/leds/torch-flash/flash_light            u:object_r:flash_light_sysfs:s0
+
+# whisperd
+/dev/emu_det                                                      u:object_r:whisperd_device:s0
+/sys/devices/virtual/switch/whisper/state                         u:object_r:whisperd_sysfs:s0
+/sys/devices/virtual/switch/whisper_hid/state                     u:object_r:whisperd_sysfs:s0
+
 # Motorola partitions
 /dev/block/mmcblk0p1               u:object_r:firmware_block_device:s0
 /dev/block/mmcblk0p8               u:object_r:utags_block_device:s0
 /dev/block/mmcblk0p20              u:object_r:hob_block_device:s0
 /dev/block/mmcblk0p21              u:object_r:hob_block_device:s0
 /dev/block/mmcblk0p22              u:object_r:persist_block_device:s0
+/dev/block/mmcblk0p27              u:object_r:pds_block_device:s0
 /dev/block/mmcblk0p28              u:object_r:cid_block_device:s0
 
 # PDS
 /pds(/.*)?                         u:object_r:pds_file:s0
 /pds/camera(/.*)?                  u:object_r:camera_data_file:s0
-
-# whisperd
-/dev/emu_det                       u:object_r:whisperd_device:s0
 
 # charge_only_mode
 /data/chargeonlymode               u:object_r:charge_only_mode_data_file:s0

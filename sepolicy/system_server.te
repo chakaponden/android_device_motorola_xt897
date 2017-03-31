@@ -1,3 +1,4 @@
 allow system_server system_file:file execmod;
+allow system_server mot_boot_mode_prop:file { read getattr open };
 
 binder_call(system_server, qti_init_shell);
