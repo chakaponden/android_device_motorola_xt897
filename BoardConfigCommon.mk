@@ -97,19 +97,6 @@ TARGET_BOOTANIMATION_TEXTURE_CACHE := false
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_15x24.h\"
 BOARD_SUPPRESS_EMMC_WIPE := true
 
-# Enable dex-preoptimization to speed up first boot sequence
-ifeq ($(HOST_OS),linux)
-  ifeq ($(WITH_DEXPREOPT),)
-    WITH_DEXPREOPT := true
-    WITH_DEXPREOPT_PIC := true
-    WITH_DEXPREOPT_BOOT_IMG_ONLY := false
-    ifneq ($(TARGET_BUILD_VARIANT),user)
-      # Retain classes.dex in APK's for non-user builds
-      DEX_PREOPT_DEFAULT := nostripping
-    endif
-  endif
-endif
-
 #TWRP
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
 TW_INTERNAL_STORAGE_PATH := "/data/media"
