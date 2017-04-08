@@ -32,6 +32,7 @@ etc/firmware/a225p5_pm4.fw
 etc/firmware/a225_pfp.fw
 etc/firmware/a225_pm4.fw
 etc/firmware/a300_pfp.fw
+etc/firmware/a300_pm4.fw
 etc/firmware/leia_pfp_470.fw
 etc/firmware/leia_pm4_470.fw
 
@@ -47,6 +48,15 @@ lib/libOmxEvrcDec.so
 lib/libOmxMux.so
 lib/libOmxQcelp13Dec.so
 lib/libOmxWmaDec.so
+
+#  Media firmware
+etc/firmware/vidc.b00
+etc/firmware/vidc.b01
+etc/firmware/vidc.b02
+etc/firmware/vidc.b03
+etc/firmware/vidc.mdt
+etc/firmware/vidc_1080p.fw
+etc/firmware/vidcfw.elf
 
 # Moto
 bin/aplogd
