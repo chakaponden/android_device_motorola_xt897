@@ -70,22 +70,10 @@ lib/libOpenVG.so
 lib/libsc-a2xx.so
 lib/libsc-a3xx.so
 
-# Graphics firmware
-etc/firmware/a300_pm4.fw
-
 # Media
 lib/libI420colorconvert.so
 lib/libgemini.so
 lib/libmm-color-convertor.so
-
-# Media firmware
-etc/firmware/vidc.b00
-etc/firmware/vidc.b01
-etc/firmware/vidc.b02
-etc/firmware/vidc.b03
-etc/firmware/vidc.mdt
-etc/firmware/vidc_1080p.fw
-etc/firmware/vidcfw.elf
 
 # Moto
 bin/whisperd.exec
