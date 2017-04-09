@@ -2,17 +2,8 @@
 bin/btnvtool
 bin/hci_qcomm_init
 
-# DRM (from mako)
-lib/libdrmdiag.so
-lib/libdrmfs.so
-lib/libdrmtime.so
-vendor/lib/drm/libdrmwvmplugin.so
+# DRM
 vendor/lib/mediadrm/libwvdrmengine.so
-vendor/lib/libdrmdecrypt.so
-vendor/lib/libwvdrm_L1.so
-vendor/lib/libwvm.so
-vendor/lib/libWVphoneAPI.so
-vendor/lib/libWVStreamControlAPI_L1.so
 
 # Blur
 vendor/lib/libuiblur.so
