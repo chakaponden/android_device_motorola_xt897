@@ -3,6 +3,8 @@ bin/btnvtool
 bin/hci_qcomm_init
 
 # DRM
+lib/libdrmfs.so
+lib/libdrmtime.so
 vendor/lib/mediadrm/libwvdrmengine.so
 
 # Blur
