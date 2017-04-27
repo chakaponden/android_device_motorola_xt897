@@ -26,6 +26,11 @@
     <!-- Boolean indicating whether the wifi chipset has background scan support -->
     <bool translatable="false" name="config_wifi_background_scan_support">false</bool>
 
+    <!-- Whether the device should automatically switch away from Wi-Fi networks that lose
+         Internet access. Actual device behaviour is controlled by
+         Settings.Global.NETWORK_AVOID_BAD_WIFI. This is the default value of that setting. -->
+    <integer translatable="false" name="config_networkAvoidBadWifi">0</integer>
+
     <!-- Flag indicating whether we should enable the automatic brightness in Settings.
                   config_hardware_automatic_brightness_available is not set, so we will use software implementation -->
     <bool name="config_automatic_brightness_available">true</bool>
