@@ -66,6 +66,9 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE := true
 
+# Malloc low RAM optimization
+MALLOC_SVELTE := true
+
 # Graphics
 USE_OPENGL_RENDERER := true
 TARGET_USES_C2D_COMPOSITION := true
