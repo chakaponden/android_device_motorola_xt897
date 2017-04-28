@@ -203,7 +203,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Audio
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.audio.flinger_standbytime_ms=300 \
-    persist.audio.lowlatency.rec=false
+    persist.audio.lowlatency.rec=false \
     audio.offload.disable=1 \
     ro.qc.sdk.audio.fluencetype=fluence \
     persist.audio.fluence.voicecall=true \
