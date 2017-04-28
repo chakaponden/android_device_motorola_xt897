@@ -156,9 +156,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.ril_class=MotorolaQualcommRIL \
     ro.telephony.ril.config=setPrefNwTypeOnUnsolConnected
 
-# Misc
+# SDCARDFS
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.fuse_sdcard=true
+    ro.sdcardfs.enable=true
 
 # Wifi
 PRODUCT_PROPERTY_OVERRIDES += \
