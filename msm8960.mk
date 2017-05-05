@@ -167,6 +167,10 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     media.stagefright.legacyencoder=true \
     media.stagefright.less-secure=true
 
+# I/O scheduler
+PRODUCT_PROPERTY_OVERRIDES += \
+    sys.io.scheduler=bfq
+
 $(call inherit-product, device/motorola/qcom-common/qcom-common.mk)
 $(call inherit-product, device/motorola/qcom-common/idc/idc.mk)
 $(call inherit-product, device/motorola/qcom-common/keychars/keychars.mk)
