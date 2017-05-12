@@ -5,7 +5,7 @@ init_daemon_domain(charge_only_mode)
 
 allow charge_only_mode graphics_device:chr_file rw_file_perms;
 allow charge_only_mode graphics_device:dir search;
-allow charge_only_mode sysfs:file write;
+allow charge_only_mode sysfs:file { read open write };
 allow charge_only_mode self:netlink_kobject_uevent_socket { bind create setopt read };
 allow charge_only_mode input_device:chr_file { read open };
 allow charge_only_mode input_device:dir search;
