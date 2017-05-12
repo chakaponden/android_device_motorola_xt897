@@ -10,6 +10,9 @@ allow aplogd self:capability { setuid setgid };
 # Read dmesg
 allow aplogd self:capability2 syslog;
 allow aplogd kernel:system syslog_mod;
+allow aplogd proc:file { open read };
+
+allow aplogd aplogd_prop:file { getattr open read };
 
 # need to create and write files in fuse partition
 allow aplogd fuse:dir create_dir_perms;
