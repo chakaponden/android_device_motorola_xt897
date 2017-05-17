@@ -124,8 +124,8 @@ case "$target" in
          chown -h system /sys/devices/system/cpu/cpufreq/interactive/target_loads
          chown -h system /sys/devices/system/cpu/cpufreq/interactive/timer_rate
          chown -h system /sys/devices/system/cpu/cpufreq/interactive/timer_slack
-         chown -h system /sys/kernel/cpufreq_limit/limited_max_freq
-         chown -h system /sys/kernel/cpufreq_limit/limited_min_freq
+         chown -h system.system /sys/kernel/cpufreq_limit/limited_max_freq
+         chown -h system.system /sys/kernel/cpufreq_limit/limited_min_freq
          echo 384000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
          echo 384000 > /sys/devices/system/cpu/cpu1/cpufreq/scaling_min_freq
          echo 384000 > /sys/devices/system/cpu/cpu2/cpufreq/scaling_min_freq
