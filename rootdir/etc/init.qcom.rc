@@ -277,7 +277,7 @@ service qmuxd /system/bin/qmuxd
 
 service netmgrd /system/bin/netmgrd
     class main
-    group radio system wakelock
+    group radio system qcom_diag wakelock
 
 service sensors /system/bin/sensors.qcom
     class late_start
