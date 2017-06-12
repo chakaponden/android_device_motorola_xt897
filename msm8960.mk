@@ -154,7 +154,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # SDCARDFS
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.sdcardfs.enable=true
+    ro.sys.sdcardfs=true
 
 # Wifi
 PRODUCT_PROPERTY_OVERRIDES += \
