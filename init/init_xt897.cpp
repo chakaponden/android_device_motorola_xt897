@@ -64,18 +64,18 @@ void vendor_load_properties()
     fgets(hardware_variant, sizeof(hardware_variant), fp);
     pclose(fp);
 
-    property_set("ro.product.device", "asanti_c");
-    property_set("ro.product.model", "PHOTON Q");
+    property_override("ro.product.device", "asanti_c");
+    property_override("ro.product.model", "PHOTON Q");
     if (modelno == "XT897") {
         /* xt897 CSpire */
-        property_set("ro.build.description", "asanti_c_cspire-user 4.1.2 9.8.2Q-122_XT897_FFW-7 8 release-keys");
-        property_set("ro.build.fingerprint", "motorola/XT897_us_csp/asanti_c:4.1.2/9.8.2Q-122_XT897_FFW-7/8:user/release-keys");
+        property_override("ro.build.description", "asanti_c_cspire-user 4.1.2 9.8.2Q-122_XT897_FFW-7 8 release-keys");
+        property_override("ro.build.fingerprint", "motorola/XT897_us_csp/asanti_c:4.1.2/9.8.2Q-122_XT897_FFW-7/8:user/release-keys");
         property_set("ro.cdma.home.operator.alpha", "Cspire");
         property_set("ro.cdma.home.operator.numeric", "311230");
     } else if (carrier == "sprint") {
         /* xt897 Sprint */
-        property_set("ro.build.description", "XT897_us_spr-user 4.1.2 9.8.2Q-122_XT897_FFW-5 6 release-keys");
-        property_set("ro.build.fingerprint", "motorola/XT897_us_spr/asanti_c:4.1.2/9.8.2Q-122_XT897_FFW-5/6:user/release-keys");
+        property_override("ro.build.description", "XT897_us_spr-user 4.1.2 9.8.2Q-122_XT897_FFW-5 6 release-keys");
+        property_override("ro.build.fingerprint", "motorola/XT897_us_spr/asanti_c:4.1.2/9.8.2Q-122_XT897_FFW-5/6:user/release-keys");
         property_set("ro.cdma.international.eri", "2,74,124,125,126,157,158,159,193,194,195,196,197,198,228,229,230,231,232,233,234,235");
         property_set("ro.cdma.home.operator.alpha", "Sprint");
         property_set("ro.cdma.home.operator.numeric", "310120");
