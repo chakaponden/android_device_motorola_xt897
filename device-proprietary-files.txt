@@ -1,0 +1,7 @@
+# device specific proprietary file list
+
+# Audio
+lib/libaudcal.so
+
+# Touch firmware
+etc/firmware/atmxt-r2.tdat
