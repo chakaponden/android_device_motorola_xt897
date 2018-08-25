@@ -1,0 +1,9 @@
+allow init block_device:lnk_file { setattr };
+allow init wcnss_device:chr_file rw_file_perms;
+allow init debugfs:dir rw_dir_perms;
+allow init debugfs:dir mounton;
+allow init debugfs:file rw_file_perms;
+
+domain_auto_trans(init, mot_boot_mode_exec, mot_boot_mode);
+domain_auto_trans(init, mount_pds_exec, vold);
+domain_trans(init, rootfs, vold)

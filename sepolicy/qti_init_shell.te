@@ -1,0 +1,17 @@
+allow qti_init_shell init:fifo_file rw_file_perms;
+allow qti_init_shell sensors_data_file:file create_file_perms;
+allow qti_init_shell sensors_data_file:dir w_dir_perms;
+allow qti_init_shell wifi_data_file:file r_file_perms;
+allow qti_init_shell wifi_data_file:dir r_dir_perms;
+allow qti_init_shell dhcp_data_file:file { getattr unlink };
+allow qti_init_shell dhcp_data_file:dir rw_dir_perms;
+allow qti_init_shell bluetooth_data_file:file { read open };
+allow qti_init_shell bluetooth_loader_exec:file { read open };
+allow qti_init_shell mot_boot_mode_prop:file { read getattr open };
+allow qti_init_shell hci_attach_dev:chr_file { read write ioctl open };
+allow qti_init_shell sysfs_devices_system_cpu:file setattr;
+
+binder_use(qti_init_shell);
+
+binder_call(qti_init_shell, servicemanager);
+binder_call(qti_init_shell, system_server);

@@ -1,0 +1,24 @@
+# batt_health
+type batt_health_data_file, file_type;
+type batt_health_sysfs, sysfs_type, fs_type;
+
+# graphicsd
+type kgsl_snapshot_sysfs, sysfs_type, fs_type;
+
+# mediaserver
+type flash_light_sysfs, sysfs_type, fs_type;
+
+# mount_pds.sh
+type mount_pds_exec, exec_type, file_type;
+
+# PDS files
+type pds_file, file_type;
+
+# qdump
+type qdump_data_file, file_type, data_file_type;
+
+# whisperd
+type whisperd_sysfs, sysfs_type, fs_type;
+
+# aplogd
+type aplogd_data_file, file_type, data_file_type;

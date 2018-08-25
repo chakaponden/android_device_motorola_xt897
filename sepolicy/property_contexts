@@ -1,0 +1,16 @@
+log.aplogd.                u:object_r:aplogd_prop:s0
+persist.atvc.              u:object_r:atvc_prop:s0
+hw.revision                u:object_r:mmi-boot-sh_prop:s0
+mot.cust_md                u:object_r:mmi-boot-sh_prop:s0
+mot.iccid                  u:object_r:mmi-boot-sh_prop:s0
+manufacturedate            u:object_r:mmi-boot-sh_prop:s0
+hw.whisper                 u:object_r:whisperd_prop:s0
+tcmd.whisper               u:object_r:whisperd_prop:s0
+ro.bootmode                u:object_r:mot_boot_mode_prop:s0
+tcmd.cid.recover.boot      u:object_r:mot_boot_mode_prop:s0
+tcmd.suspend               u:object_r:mot_boot_mode_prop:s0
+tcmd.12m.test              u:object_r:mot_boot_mode_prop:s0
+sys.chargeonly.mode        u:object_r:mot_boot_mode_prop:s0
+radio.adb_log.on           u:object_r:radio_prop:s0
+telephony.lteOnCdmaDevice  u:object_r:radio_prop:s0
+persist.ril.event.report   u:object_r:radio_prop:s0

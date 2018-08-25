@@ -1,0 +1,2 @@
+allow netd self:capability fsetid;
+allow netd mot_boot_mode_prop:file { read getattr open };
