@@ -1,0 +1,4 @@
+allow vold persist_file:dir r_dir_perms;
+allow vold pds_block_device:blk_file { read getattr open };
+
+domain_trans(vold, shell_exec, vold)

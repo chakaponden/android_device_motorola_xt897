@@ -1,0 +1,2 @@
+allow ueventd persist_file:lnk_file r_file_perms;
+
