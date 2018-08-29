@@ -32,7 +32,7 @@ TARGET_BOARD_PLATFORM := msm8960
 TARGET_BOOTLOADER_BOARD_NAME := MSM8960
 TARGET_CPU_VARIANT := krait
 
--include device/motorola/qcom-common/BoardConfigCommon.mk
+-include device/motorola/xt897/BoardConfigCommon-qcom-common.mk
 
 LOCAL_PATH := device/motorola/msm8960_jbbl-common
 
