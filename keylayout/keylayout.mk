@@ -1,4 +1,4 @@
-LOCAL_PATH := device/motorola/qcom-common
+LOCAL_PATH := device/motorola/xt897
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/keylayout/atmel_mxt_ts.kl:system/usr/keylayout/atmel_mxt_ts.kl \
 	$(LOCAL_PATH)/keylayout/msm8960-snd-card_Button_Jack.kl:system/usr/keylayout/msm8960-snd-card_Button_Jack.kl \

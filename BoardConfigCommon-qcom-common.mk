@@ -21,7 +21,7 @@
 # definition file).
 #
 
-LOCAL_PATH := device/motorola/qcom-common
+LOCAL_PATH := device/motorola/xt897
 
 BOARD_VENDOR := motorola-qcom
 

@@ -51,6 +51,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.default_cdma_sub=1 \
     DEVICE_PROVISIONED=1
 
-$(call inherit-product, device/motorola/qcom-common/modules/nfc/nfc.mk)
+$(call inherit-product, device/motorola/xt897/modules/nfc/nfc.mk)
 $(call inherit-product, vendor/motorola/xt897/xt897-vendor.mk)
 

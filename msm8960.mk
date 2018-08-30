@@ -171,8 +171,8 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     sys.io.scheduler=bfq
 
-$(call inherit-product, device/motorola/qcom-common/qcom-common.mk)
-$(call inherit-product, device/motorola/qcom-common/idc/idc.mk)
-$(call inherit-product, device/motorola/qcom-common/keychars/keychars.mk)
-$(call inherit-product, device/motorola/qcom-common/keylayout/keylayout.mk)
+$(call inherit-product, device/motorola/xt897/qcom-common.mk)
+$(call inherit-product, device/motorola/xt897/idc/idc.mk)
+$(call inherit-product, device/motorola/xt897/keychars/keychars.mk)
+$(call inherit-product, device/motorola/xt897/keylayout/keylayout.mk)
 $(call inherit-product, vendor/motorola/msm8960_jbbl-common/msm8960_jbbl-common-vendor.mk)
