@@ -22,7 +22,7 @@
 # definition file).
 #
 
--include device/motorola/msm8960_jbbl-common/BoardConfigCommon.mk
+-include device/motorola/xt897/BoardConfigCommon.mk
 
 # inherit from the proprietary version
 -include vendor/motorola/xt897/BoardConfigVendor.mk
