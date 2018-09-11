@@ -34,7 +34,7 @@ TARGET_CPU_VARIANT := krait
 
 -include device/motorola/xt897/BoardConfigCommon-qcom-common.mk
 
-LOCAL_PATH := device/motorola/msm8960_jbbl-common
+LOCAL_PATH := device/motorola/xt897
 
 TARGET_SPECIFIC_HEADER_PATH += $(LOCAL_PATH)/include
 
@@ -66,10 +66,10 @@ NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
 TARGET_NO_ADAPTIVE_PLAYBACK := true
 
 # Custom relese tools
-TARGET_RELEASETOOLS_EXTENSIONS := device/motorola/msm8960_jbbl-common
+TARGET_RELEASETOOLS_EXTENSIONS := device/motorola/xt897
 
 # Recovery
-TARGET_RECOVERY_DEVICE_DIRS := device/motorola/msm8960_jbbl-common
+TARGET_RECOVERY_DEVICE_DIRS := device/motorola/xt897
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBA_8888"
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/etc/fstab.qcom
 TARGET_USERIMAGES_USE_EXT4 := true
@@ -91,5 +91,5 @@ include device/qcom/sepolicy/sepolicy.mk
 
 # SELinux
 BOARD_SEPOLICY_DIRS += \
-    device/motorola/msm8960_jbbl-common/sepolicy
+    device/motorola/xt897/sepolicy
 
