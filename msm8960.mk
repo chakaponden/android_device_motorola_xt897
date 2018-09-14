@@ -18,7 +18,7 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
-LOCAL_PATH := device/motorola/msm8960_jbbl-common
+LOCAL_PATH := device/motorola/xt897
 
 # msm8960_jbbl-common specific overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
